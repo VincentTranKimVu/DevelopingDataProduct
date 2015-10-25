@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Search Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Data Search Application">
+  <meta name="author" content="Vu Tran - Oct 2015">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Data Search Application</h1>
+    <h2>This is for Developing Data Product Course Project</h2>
+    <p>Vu Tran - Oct 2015<br/>Engineer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>This is a Shiny Application developed for exploring a dataset.</li>
+<li>This presentation will give some keys information for users to understand the application.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Dataset introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The dataset is downloaded from <a href="http://rebrickable.com/downloads">http://rebrickable.com/downloads</a></li>
+<li>The data contains below information:
+
+<ul>
+<li>Fields: set id, year, num pieces, theme, description</li>
+<li>Have total arround 10500 records (need to access realtime to know exactly the total records)</li>
+</ul></li>
+<li>Data illustrations</li>
+</ul>
+
+<pre><code class="r">require(data.table)
+data &lt;- fread(&quot;./data/sets.csv&quot;)
+head(data,3)
+</code></pre>
+
+<pre><code>##    set_id year pieces       t1                      descr
+## 1:   00-1 1970    471 Legoland            Weetabix Castle
+## 2: 0011-2 1978     12     Town          Town Mini-Figures
+## 3: 0011-3 1987      2   Castle Castle 2 for 1 Bonus Offer
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Application requirements</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application must include the following:</p>
+
+<ul>
+<li>Some form of input (widget: textbox, radio button, checkbox, ...)</li>
+<li>Some operation on the ui input in sever.R</li>
+<li>Some reactive output displayed as a result of server calculations</li>
+<li>You must also include enough documentation so that a novice user could use your application.</li>
+<li>The documentation should be at the Shiny website itself. Do not post to an external link.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Completed functions</p>
+
+<ul>
+<li>Sliders for timeline and Pieces</li>
+<li>Themes checkbox list for selection</li>
+<li>Data list displayed with search function</li>
+</ul></li>
+<li><p>Publishes</p>
+
+<ul>
+<li>Application: <a href="https://vincenttrankimvu.shinyapps.io/DDP_CourseProject">https://vincenttrankimvu.shinyapps.io/DDP_CourseProject</a> </li>
+<li>Source code: <a href="https://github.com/VincentTranKimVu/DevelopingDataProduct">https://github.com/VincentTranKimVu/DevelopingDataProduct</a> </li>
+</ul></li>
+</ul>
+
+<h3>End</h3>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Dataset introduction'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application requirements'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Results'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
